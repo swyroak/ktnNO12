@@ -8,7 +8,7 @@
         let obj = document.createElement("a");
         div.setAttribute("class", "container")
         obj.setAttribute("href", "https://cxg-syohinkanri.cybozu.com/k/46/");
-        obj.innerHTML = "リンク予定地2098"
+        obj.innerHTML = "リンク予定地2148"
         let obj2 = obj.cloneNode(true);
         obj2.innerHTML = "リンク予定地02"
         el.appendChild(div);
