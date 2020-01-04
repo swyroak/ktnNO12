@@ -63,6 +63,19 @@
                             "アバウト数": { "value": 0 },
                             "ID": { "value": record['納品先コード']['value'] + '_' + record['企画回']['value'] + '_' + value['value']['JANコード']['value'] + '_04' },
                             "日付シリアル": { "value": value['value']['引当4']['value'] }
+                        },
+                        {
+                            "支所倉庫コード": { "value": record['支所倉庫コード']['value'] },
+                            "荷主コード": { "value": "0514507" },
+                            "商品コード": { "value": value['value']['JANコード']['value'] },
+                            "納品先コード": { "value": record['納品先コード']['value'] },
+                            "納品先分割識別子": { "value": 0 },
+                            "日付": { "value": value['value']['引当5']['value'].replace(/-/g, '') },
+                            "企画回": { "value": record['企画回']['value'] },
+                            "予測数": { "value": Math.ceil(value['value']['数量5']['value']) },
+                            "アバウト数": { "value": 0 },
+                            "ID": { "value": record['納品先コード']['value'] + '_' + record['企画回']['value'] + '_' + value['value']['JANコード']['value'] + '_05' },
+                            "日付シリアル": { "value": value['value']['引当5']['value'] }
                         }
                     ]
                 }
