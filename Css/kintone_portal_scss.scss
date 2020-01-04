@@ -1,0 +1,133 @@
+$basecolor02:#F0F8FF;
+
+body {
+    background-color: $basecolor02;
+}
+
+.gaia-header-header {
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 0 3px 6px #ccc;
+}
+
+.gaia-header-toolbar {
+    background-color: $basecolor02;
+}
+
+.ocean-portal-index-header {
+    border: black 1px;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px #ccc;
+}
+
+.ocean-portal-index-header-name {
+    color: #094067;
+    text-shadow: none;
+
+}
+
+.ocean-portal-index-header-optionmenu {
+    background-color: $basecolor02;
+}
+
+.ocean-portal-index-header-img {
+    border-top: rgb(227, 231, 232) solid 1px;
+    border-radius: 0px 25px 0px 25px;
+}
+
+
+.gaia-argoui-widget-header {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.gaia-header-toolbar-navigation {
+
+    box-shadow: 0 1px 1px #ccc;
+}
+
+.gaia-argoui-coveroptionmenubutton {
+    border-radius: 0px 0px 15px 0px;
+    background-color: gray;
+    opacity: 0.6;
+}
+
+.kintone-portal-content-space {
+    background-color: $basecolor02;
+
+    .container {
+        margin: 15px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 15px;
+        box-shadow: 0 3px 6px #ccc;
+
+        .div_up {
+            margin: 2px;
+        }
+
+        .div_down {
+            margin: 2px;
+        }
+    }
+}
+
+.ocean-portal-index {
+    background-color: $basecolor02;
+}
+
+
+
+
+.gaia-header-toolbar-navigation {
+    background-color: $basecolor02
+}
+
+
+
+.gaia-argoui-widget {
+    border-radius: 5px;
+    box-shadow: 0 3px 6px #ccc;
+
+}
+
+.gaia-argoui-widget-footer {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.gaia-argoui-spacescrollinglist-list li:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.gaia-argoui-appscrollinglist-list {
+    li:last-child {
+        border-radius: 0px 0px 5px 5px;
+    }
+
+}
+
+.gaia-argoui-appscrollinglist-icon {
+    border-radius: 25px;
+}
+
+.gaia-argoui-spacescrollinglist-icon {
+    border-radius: 25px;
+}
+
+.kintone-portal-content-space {
+    div {
+        p {
+            display: inline;
+        }
+
+        a {
+            margin: 3px 9px 3px 0px;
+
+            .tooltips {
+                display: none;
+            }
+        }
+
+        a:hover .tooltips {
+            display: block;
+        }
+    }
+}
