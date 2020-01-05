@@ -20,7 +20,8 @@
                     let targetDay = new Date(baseDay.setDate(baseDay.getDate() + gouSuu * 7 + currentValue['day']))
                     let targetDayKtn = targetDay.getFullYear() + '-' + ("0" + (targetDay.getMonth() + 1)).slice(-2) + '-' + ("0" + targetDay.getDate()).slice(-2)
                     let targetDayStr = targetDayKtn.replace(/-/g, '')
-                    let query = "ID=" + id
+                    let query = 'ID = "' + id + '"'
+                    console.log(query)
                     let finder = {
                         "app": 47,
                         "query": query,
@@ -51,6 +52,8 @@
                             }, function (error) {
                                 console.log(error);
                             });
+                        } else {
+                            console.log('被ってるから書き込まない')
                         }
                     }, function (error) {
                         console.log('取り込みエラーが出たよ--------------------------------')
