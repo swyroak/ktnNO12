@@ -3,15 +3,17 @@
         'use strict'
         let mybutton = document.createElement('button');
         let records = event.records;
-        const BASEDAY = new Date('1982/10/20 09:00')
+
         mybutton.id = 'mybutton';
         mybutton.innerText = 'データコピー';
         mybutton.onclick = function () {
             console.log(records);
             records.forEach((value) => {
-                const TARGETDAY = BASEDAY.getDate() + value['号数']['value']
+                let BASEDAY = new Date('1982/10/20 09:00')
+                let TARGETDAY = new Date(BASEDAY.setDate(BASEDAY.getDate() + value['号数']['value'] * 7))
+                console.log(TARGETDAY.toLocaleDateString())
                 console.log(TARGETDAY)
-                console.log((value['号数']['value'] % 52 - 17) * 7)
+                console.log(TARGETDAY.getFullYear() +'-'+(TARGETDAY.getMonth()+1)+'-'+TARGETDAY.getDate())
             });
 
         }
