@@ -4,7 +4,13 @@
         let el = kintone.portal.getContentSpaceElement();
 
         let div_container = document.createElement("div");
-        div_container.setAttribute("class", "container");
+        div_container.setAttribute("class", "top_container");
+        
+        let div_container_right=document.createElement("div")
+        div_container_right.setAttribute("class","mid_container_right")
+
+        let div_container_left=document.createElement("div")
+        div_container_left.setAttribute("class","mid_container_left")
 
         let div_up = document.createElement("div");
         let div_down = document.createElement("div");
@@ -19,9 +25,6 @@
         link01_01.setAttribute("href", "https://cxg-syohinkanri.cybozu.com/k/46/");
         link01_01.setAttribute("class", "quick_link")
         link01_01.innerHTML = "東海コープ"
-        let tooltips01_01 = document.createElement("div")
-        tooltips01_01.setAttribute("class", "tooltips")
-        tooltips01_01.innerHTML = "東海コープの企画情報入力に飛びます。"
 
         let link01_02 = link01_01.cloneNode(true);
         link01_02.innerHTML = "コープきんき"
@@ -29,15 +32,20 @@
         let link02_01 = link01_01.cloneNode(true);
         link02_01.innerHTML = "リンク予定地02"
 
+        let link03_01=link01_01.cloneNode(true);
+        link03_01.innerHTML="計算機"
+
         el.appendChild(div_container);
-        div_container.appendChild(div_up);
+        div_container.appendChild(div_container_left);
+        div_container_left.appendChild(div_up);
         div_up.appendChild(head_tag01);
         div_up.appendChild(link01_01);
         div_up.appendChild(link01_02);
-        link01_01.appendChild(tooltips01_01);
-        div_container.appendChild(div_down);
+        div_container_left.appendChild(div_down);
         div_down.appendChild(head_tag02);
         div_down.appendChild(link02_01);
+        div_container.appendChild(div_container_right);
+        div_container_right.appendChild(link03_01)
 
         //日次ルーチンの追加
         let day = new Date()

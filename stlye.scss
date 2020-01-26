@@ -1,0 +1,8 @@
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    .parts01{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}

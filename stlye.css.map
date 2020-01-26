@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,uBAAuB;CAKjD;;AAPD,AAGI,UAHM,CAGN,QAAQ,CAAA;EACJ,iBAAiB,EAAE,CAAC;EACpB,eAAe,EAAE,CAAC;CACrB",
+    "sources": [
+        "stlye.scss"
+    ],
+    "names": [],
+    "file": "stlye.css"
+}
