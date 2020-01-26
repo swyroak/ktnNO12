@@ -5,12 +5,12 @@
 
         let div_container = document.createElement("div");
         div_container.setAttribute("class", "top_container");
-        
-        let div_container_right=document.createElement("div")
-        div_container_right.setAttribute("class","mid_container_right")
 
-        let div_container_left=document.createElement("div")
-        div_container_left.setAttribute("class","mid_container_left")
+        let div_container_right = document.createElement("div")
+        div_container_right.setAttribute("id", "mid_container_right")
+
+        let div_container_left = document.createElement("div")
+        div_container_left.setAttribute("class", "mid_container_left")
 
         let div_up = document.createElement("div");
         let div_down = document.createElement("div");
@@ -32,8 +32,8 @@
         let link02_01 = link01_01.cloneNode(true);
         link02_01.innerHTML = "リンク予定地02"
 
-        let link03_01=link01_01.cloneNode(true);
-        link03_01.innerHTML="計算機"
+        let link03_01 = link01_01.cloneNode(true);
+        link03_01.innerHTML = "計算機"
 
         el.appendChild(div_container);
         div_container.appendChild(div_container_left);
