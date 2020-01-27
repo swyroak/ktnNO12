@@ -1,0 +1,25 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wrapper .inp {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 2.2%;
+  color: gray;
+}
+
+.wrapper .inp:focus {
+  color: black;
+}
+
+.wrapper .ans {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 3;
+}
+/*# sourceMappingURL=kintone_abs.css.map */
