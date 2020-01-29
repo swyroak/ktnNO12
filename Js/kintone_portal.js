@@ -74,6 +74,13 @@
         link02_02.setAttribute("href", "https://cxg-syohinkanri.cybozu.com/k/47/?view=5521501")
         link02_02.innerHTML = "単価チェック"
 
+        let link02_03 = link01_01.cloneNode(true);
+        link02_03.setAttribute("href", "https://cxg-syohinkanri.cybozu.com/k/59/report?report=5521653")
+        link02_03.innerHTML = "物流計画"
+
+        let link02_04 = link01_01.cloneNode(true);
+        link02_04.setAttribute("href", "https://cxg-syohinkanri.cybozu.com/k/57/")
+        link02_04.innerHTML = "ロットサポート予約情報"
 
         let years = {
             "D": "2013",
@@ -230,6 +237,7 @@
         div_down.appendChild(head_tag02);
         div_down.appendChild(link02_01);
         div_down.appendChild(link02_02);
+        div_down.appendChild(link02_03);
         div_container.appendChild(div_container_right);
 
         //日次ルーチンの追加
