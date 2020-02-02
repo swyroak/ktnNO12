@@ -238,7 +238,9 @@
         div_down.appendChild(link02_01);
         div_down.appendChild(link02_02);
         div_down.appendChild(link02_03);
+        div_down.appendChild(link02_04);
         div_container.appendChild(div_container_right);
+        
 
         //日次ルーチンの追加
         let day = new Date()
