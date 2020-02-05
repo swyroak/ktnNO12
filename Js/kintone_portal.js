@@ -240,32 +240,43 @@
         div_down.appendChild(link02_03);
         div_down.appendChild(link02_04);
         div_container.appendChild(div_container_right);
-        
+
 
         //日次ルーチンの追加
         let day = new Date()
         if (day.getDay() != 0) {
-            let body = {
-                "app": 12,
-                "query": "対応日付 = TODAY()",
-                "fields": ["対応日付", "対応者"]
-            };
+            // 商品管理課とナリスNBの日次ルーチンを生成
+            let appNumbers = [12, 22]
+            let body
 
-            kintone.api(kintone.api.url('/k/v1/records', true), 'GET', body, function (resp) {
-                console.log(resp);
-                if (resp['records']['length'] == 0) {
-                    let daily_body = {
-                        "app": 12
-                    };
-                    kintone.api(kintone.api.url('/k/v1/record', true), 'POST', daily_body, function (ans) {
-                        console.log(ans);
-                    }, function (error) {
-                        console.log(error);
-                    });
-                }
-            }, function (error) {
-                console.log(error);
+            appNumbers.forEach(appNumber => {
+
+                body = {
+                    "app": appNumber,
+                    "query": "対応日付 = TODAY()",
+                    "fields": ["対応日付"]
+                };
+
+                kintone.api(kintone.api.url('/k/v1/records', true), 'GET', body, function (resp) {
+
+                    console.log(resp);
+                    if (resp['records']['length'] == 0) {
+                        let daily_body = {
+                            "app": appNumber
+                        };
+
+                        kintone.api(kintone.api.url('/k/v1/record', true), 'POST', daily_body, function (ans) {
+                            console.log(ans);
+                        }, function (error) {
+                            console.log(error);
+                        });
+                    }
+
+                }, function (error) {
+                    console.log(error);
+                });
             });
+
         } else {
             console.log('日曜なので作らない')
         }
